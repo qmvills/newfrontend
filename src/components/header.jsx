@@ -22,7 +22,7 @@ const Header = () => {
                 <Link to = {'/receive'}><li className="hover:text-green-700">Receive</li></Link>
                 <Link to = {'/disburse'}><li className="hover:text-green-700">Disburse</li></Link>
                 <Link to = {'/register'}><li className="hover:text-green-700">Register</li></Link>
-                <Link to = {'/logout'}><li>Logout</li></Link>
+                <Link to = {'/login'}><li>Logout</li></Link>
             </ul>
             
             {/*CLOSE ICON FOR SIDE NAV*/}
@@ -40,7 +40,7 @@ const Header = () => {
                 <Link to = {'/receive'}><li className="p-2 hover:text-green-700 hover:font-bold">Receive</li></Link>
                 <Link to = {'/disburse'}><li className="p-2 hover:text-green-700 hover:font-bold">Disburse</li></Link>
                 <Link to = {'/register'}><li className="p-2 hover:text-green-700 hover:font-bold">Register</li></Link>
-                <Link to = {'/logout'}><li className="p-2 hover:text-green-700 hover:font-bold">Logout</li></Link>
+                <Link to = {'/login'}><li className="p-2 hover:text-green-700 hover:font-bold">Logout</li></Link>
            </ul>
         </nav>
     )
