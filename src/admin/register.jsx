@@ -34,20 +34,23 @@ const handleSubmit=(e)=>{
             <form onSubmit={handleSubmit} className="flex flex-col gap-4 p-20">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                        <label className="form-lable text-xl">Id Number:</label>
-                        <input type="id" name="username" className="p-5 w-full text-black py-2 bg-trans border-b border-black outline-none focus:outline-none" onChange={handleInput}/>
+                        <label className="form-lable text-xl">First Name:</label>
+                        <input type="text" name="fname" className="p-5 w-full text-black py-2 bg-trans border-b border-black outline-none focus:outline-none" onChange={handleInput}/>
                     </div>
+
                     <div>
                         <label className="form-lable text-xl">Last Name:</label>
                         <input type="text" name="lname" className="p-5 w-full text-black py-2 bg-trans border-b border-black outline-none focus:outline-none" onChange={handleInput}/>
                     </div>
+
                     <div>
-                        <label className="form-lable text-xl">First Name:</label>
-                        <input type="text" name="fname" className="p-5 w-full text-black py-2 bg-trans border-b border-black outline-none focus:outline-none" onChange={handleInput}/>
+                        <label className="form-lable text-xl">ID Number:</label>
+                        <input type="id" name="username" className="p-5 w-full text-black py-2 bg-trans border-b border-black outline-none focus:outline-none" onChange={handleInput}/>
                     </div>
+
                     
                     <div >
-                        <label className="form-lable text-xl">Gender:</label>
+                        <label className="form-lable text-xl ">Gender:</label>
                         <div className="flex items-center gap-2">
                             <input id="male-radio" type="radio" value="male" name="gender" className="w-4 h-4"/>
                             <label htmlFor="male-radio" className="ml-1 text-sm font-medium text-gray-900 dark:text-gray-300">Male</label>
@@ -61,8 +64,9 @@ const handleSubmit=(e)=>{
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                        <label className="form-lable text-xl">Year Level:</label>
+                        <label className="form-lable text-xl ">Year Level:</label>
                         <select className="p-5 w-full text-black py-2 bg-trans border-b border-black outline-none focus:outline-none" name="yearLevel">
+                            <option value="0">--Select Year Level--</option>
                             <option value="1">First Year</option>
                             <option value="2">Second Year</option>
                             <option value="3">Third Year</option>
@@ -73,6 +77,7 @@ const handleSubmit=(e)=>{
                     <div>
                         <label className="form-lable text-xl">User Type:</label>
                         <select className="p-5 w-full text-black py-2 bg-trans border-b border-black outline-none focus:outline-none" name="userType">
+                            <option value="0">--Select User Type--</option>
                             <option value="officer">Officer</option>
                             <option value="treasurer">Treasurer</option>
                             <option value="regular">Regular Student</option>
@@ -87,12 +92,12 @@ const handleSubmit=(e)=>{
                     </div>
                     <div>
                         <label className="form-lable text-xl">Password:</label>
-                        <input type="password" name="password" className="p-5 w-full text-black py-2 bg-trans border-b border-black outline-none focus:outline-none" onChange={handleInput}/>
+                        <input type="password" value={"user123"} name="password" className="p-5 w-full text-black py-2 bg-trans border-b border-black outline-none focus:outline-none" onChange={handleInput}/>
                     </div>
                 </div>
 
-                <div>
-                    <button type="submit" className="p-4 bg-green-500 text-white rounded-md hover:bg-green-600">Submit</button>
+                <div className="flex justify-end">
+                    <button type="submit" className="justify justify-left px-20 bg-black text-white rounded-md hover:bg-green-700">Submit</button>
                 </div>
             </form>
         </div>

@@ -14,29 +14,30 @@ import Register from './admin/register';
 
 const router = createBrowserRouter([
 
-  
+
 
   {
-    path: "/register", element: <Register/>
-
-  },
-  {
-    path: "/disburse", element: <Disburse/>
+    path: "/register", element: <Register />
 
   },
   {
-    path: "/receive", element: <Receive/>
+    path: "/disburse", element: <Disburse />
 
   },
   {
-    path: "/", element: <Home/>
+    path: "/receive", element: <Receive />
+
+  },
+  {
+    path: "/", element: <Home />
 
   },
   {
     path: "/Login", element: <App />
   }
 
-]) 
+
+])
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -45,9 +46,7 @@ root.render(
     <BrowserRouter>
 
     </BrowserRouter>
-    <RouterProvider router={router}/>
- 
-
+    <RouterProvider router={router} />
   </React.StrictMode>,
   document.getElementById('root')
 );
