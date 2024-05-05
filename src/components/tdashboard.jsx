@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function Dashboard({ data }) {
+function Tdashboard({ data }) {
     const [availableFunds, setAvailableFunds] = useState(0);
     const [expenses, setExpenses] = useState(0);
     const [balance, setBalance] = useState(0);
@@ -37,4 +37,4 @@ function Dashboard({ data }) {
     );
 }
 
-export default Dashboard;
+export default Tdashboard;

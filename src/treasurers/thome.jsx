@@ -4,8 +4,8 @@ import Dashboard from "../components/dashboard";
 
 import { useState } from "react";
 
-const Home = () => {
-  const [title, setTitle] = useState("ADMIN DASHBOARD");
+const Thome = () => {
+  const [title, setTitle] = useState("TREASURERS DASHBOARD");
 
   return (
     <div className="h-screen flex flex-col">
@@ -18,4 +18,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Thome;

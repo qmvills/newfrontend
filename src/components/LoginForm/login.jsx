@@ -46,7 +46,7 @@ const Login = () => {
                     </div>
 
                     <div className="w-full flex flex-col my-4">
-                        <Link to="/Home" className="w-full text-white bg-black rounded-md p-4 text-center flex items-center justify-center ease-in-out duration-150 hover:bg-green-700 font-bold">Log In</Link>
+                        <Link to="/" className="w-full text-white bg-black rounded-md p-4 text-center flex items-center justify-center ease-in-out duration-150 hover:bg-green-700 font-bold">Log In</Link>
                     </div>
                 </div>
             </div>
