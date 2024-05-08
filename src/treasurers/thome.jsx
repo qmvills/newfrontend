@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../components/header";
-import Dashboard from "../components/dashboard";
+import Theader from "../components/theader";
+import Tdashboard from "../components/tdashboard";
 
 import { useState } from "react";
 
@@ -9,10 +9,11 @@ const Thome = () => {
 
   return (
     <div className="h-screen flex flex-col">
-      <Header />
-      <h1 className="mt-8 px-10 text-3xl font-semibold mb-4">Dashboard</h1>
+      <Theader />
+      <h1 className="mt-8 px-10 text-4xl font-semibold mb-4">Welcome Jairah Jave!</h1>  {/*name coming fron db*/}
+      <h1 className="mt-8 px-10 text-3xl font-semibold mb-4">Financial Overview</h1>
         <div className="flex-grow overflow-auto">
-            <Dashboard />
+            <Tdashboard />
         </div>
     </div>
   );

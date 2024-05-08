@@ -6,20 +6,34 @@ import App from './App';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+import Login from './components/LoginForm/login';
+
 import Home from './admin/home';
 import Receive from './admin/receive';
 import Disburse from './admin/disburse';
 import Register from './admin/register';
-import Firstyear from './components/TreasurertList/firstyear';
-import Secondyear from './components/TreasurertList/secondyear';
-import Thirdyear from './components/TreasurertList/thirdyear';
-import Fourthyear from './components/TreasurertList/fourthyear';
+import Addpayable from './admin/addpayable';
 
-import Yearone from './components/adminlist/yearfour';
-import Yeartwo from './components/adminlist/yeartwo';
-import Yearthree from './components/adminlist/yearthree';
-import Yearfour from './components/adminlist/yearfour';
-import Irregular from './components/adminlist/irregular';
+import First from './components/adminreceive/first';
+import Second from './components/adminreceive/second';
+import Third from './components/adminreceive/third';
+import Fourth from './components/adminreceive/fourth';
+import Irregular from './components/adminreceive/irregular';
+
+import Thome from './treasurers/thome';
+import Theader from './components/theader';
+import Tdisburse from './treasurers/tdisburse';
+import Treceive from './treasurers/treceive';
+
+import Firstyear from './components/treasurerreceive/firstyear';
+import Secondyear from './components/treasurerreceive/secondyear';
+import Thirdyear from './components/treasurerreceive/thirdyear';
+import Fourthyear from './components/treasurerreceive/fourthyear';
+import YearList from './components/YearList';
+
+
+
+
 
 
 const router = createBrowserRouter([
@@ -39,6 +53,10 @@ const router = createBrowserRouter([
 
   },
   {
+    path: "/addpayable", element: <Addpayable />
+
+  },
+  {
     path: "/", element: <Home />
 
   },
@@ -46,6 +64,45 @@ const router = createBrowserRouter([
     path: "/Login", element: <App />
 
   },
+  {
+    path: "/first", element: <First />
+
+  },
+  {
+    path: "/second", element: <Second />
+
+  },
+  {
+    path: "/third", element: <Third />
+
+  },
+  {
+    path: "/fourth", element: <Fourth />
+
+  },
+
+
+
+
+  
+  {
+    path: "/thome", element: <Thome/>
+
+  },
+  {
+    path: "/theader", element: <Theader/>
+
+  },
+  {
+    path: "/tdisburse", element: <Tdisburse/>
+
+  },
+  {
+    path: "/treceive", element: <Treceive/>
+
+  },
+
+
   {
     path: "/firstyear", element: <Firstyear/>
 
@@ -62,31 +119,18 @@ const router = createBrowserRouter([
     path: "/fourthyear", element: <Fourthyear/>
 
   },
-
-
-  {
-    path: "/yearone", element: <Yearone/>
-
-  },
-  {
-    path: "/yeartwo", element: <Yeartwo/>
-
-  },
-  {
-    path: "/yearthree", element: <Yearthree/>
-
-  },
-  {
-    path: "/yearfour", element: <Yearfour/>
-
-  },
-
   {
     path: "/irregular", element: <Irregular/>
 
   },
 
+  {
+    path: "/yearlist", element: <YearList />
 
+  },
+
+
+ 
 
 
 

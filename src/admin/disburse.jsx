@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../components/header";
 import { useState } from "react";
-import StudentTable from "../components/TreasurertList/firstyear";
 import YearList from "../components/YearList";
 
 const Disburse= () => {
@@ -12,8 +11,8 @@ const Disburse= () => {
         <div>
             <Header/>
 
-            <div>
-        <h1>DISBURSEMENT PAGE</h1>
+            <div className="flex flex-col items-center">
+            <h1 className="mt-8 px-10 text-3xl font-bold mb-4 ">"This feature is currently not available."</h1>
             </div>
         </div>
     )

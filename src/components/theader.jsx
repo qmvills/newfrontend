@@ -9,9 +9,8 @@ import { RiUserAddLine } from "react-icons/ri";
 import { IoMdHome } from "react-icons/io";
 import { IoLogOutSharp } from "react-icons/io5";
 import { GiPayMoney } from "react-icons/gi";
-import { IoMdAdd } from "react-icons/io";
-import Addpayable from "../admin/addpayable";
-const Header = () => {
+
+const Theader = () => {
 
     const [nav, setNav] = useState(false)
 
@@ -24,11 +23,9 @@ const Header = () => {
             <h1 className="text-3xl mt-5 font-bold text-white">BSIT Disbursement System</h1>
             </div>
             <ul className="hidden md:flex gap-28 text-2xl text-white">
-                <Link to = {'/'}><li className="hover:text-green-700"><IoMdHome className="ml-4 mt-2" size={30} />Home</li></Link>
-                <Link to = {'/receive'}><li className="hover:text-green-700"><GiReceiveMoney className="ml-6 mt-2" size={30}/>Receive</li></Link>
-                <Link to = {'/disburse'}><li className="hover:text-green-700"><GiPayMoney className="ml-6 mt-2" size={30} />Disburse</li></Link>
-                <Link to = {'/addpayable'}><li className="hover:text-green-700"><IoMdAdd  className="ml-12 mt-2" size={30}/>Add Payable</li></Link>
-                <Link to = {'/register'}><li className="hover:text-green-700"><RiUserAddLine className="ml-6 mt-2" size={30} />Register</li></Link>
+                <Link to = {'/thome'}><li className="hover:text-green-700"><IoMdHome className="ml-4 mt-2" size={30} />Home</li></Link>
+                <Link to = {'/treceive'}><li className="hover:text-green-700"><GiReceiveMoney className="ml-6 mt-2" size={30}/>Receive</li></Link>
+                <Link to = {'/tdisburse'}><li className="hover:text-green-700"><GiPayMoney className="ml-24 mt-2" size={30} />Disbursement History</li></Link>
                 
                
             </ul>
@@ -47,14 +44,13 @@ const Header = () => {
             : 'opacity-0 transform translate-y-full'} transition-transform
             absolute top-0 left-0 w-full h-screen bg-white flex flex-col justify-center items-center text-3xl
             `} onClick={() => setNav (false)}>
-                <Link to = {'/'}><li className="p-2 hover:text-green-700 hover:font-bold">Home</li></Link>
-                <Link to = {'/receive'}><li className="p-2 hover:text-green-700 hover:font-bold">Receive</li></Link>
-                <Link to = {'/disburse'}><li className="p-2 hover:text-green-700 hover:font-bold">Disburse</li></Link>
-                <Link to = {'/register'}><li className="p-2 hover:text-green-700 hover:font-bold">Register</li></Link>
+                <Link to = {'/thome'}><li className="p-2 hover:text-green-700 hover:font-bold">Home</li></Link>
+                <Link to = {'/treceive'}><li className="p-2 hover:text-green-700 hover:font-bold">Receive</li></Link>
+                <Link to = {'/tdisburse'}><li className="p-2 hover:text-green-700 hover:font-bold">Disbursement History</li></Link>
                 <Link to = {'/login'}><li className="p-2 hover:text-green-700 ">Logout</li></Link>
            </ul>
         </nav>
     )
 }
 
-export default Header;
+export default Theader;

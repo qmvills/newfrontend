@@ -1,57 +1,87 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import COVER_IMAGE from "../Assets/black.png";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../Assets/logo.webp";
 
 const Login = () => {
-    return (
-        <div className="w-full h-screen flex items-start overflow-y-hidden">
-            <div className="relative w-1/2 h-full flex flex-col ">
-                <div className="absolute top-[20%] left-[32%] flex flex-col">
-                    <img src={logo} className="w-80 my-4"/>
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-                    <div className="w-full items-center justify-center">
-                        <h1 className="-ml-4 text-3xl text-white font-bold">BSIT Disbursement System</h1>
-                        <p className="-ml-24 text-xl text-white ">Pioneering Efficiency in IT Department Funding Management.</p>
-                    </div>
-                </div>
-                <img src={COVER_IMAGE} className="w-full .h-1/2 object-cover"/>
-            </div>
+  const handleLogin = (e) => {
+    e.preventDefault();
 
-            <div className="w-1/2 h-full bg-white flex flex-col p-32 my-20"> 
-                <div className="w-full flex flex-col">
-                    <div className="w-full flex flex-col mb-10">
-                        <h1 className="text-3xl font-semibold mb-4">Login</h1>
-                        <p className="text-textbase mb-2">Welcome! Please enter your details to login.</p>
-                    </div>
+    if (username === "admin" && password === "admin123") {
+      navigate("/"); // Redirect to admin page
+    } else if (username === "treasurer" && password === "123") {
+      navigate("/thome"); // Redirect to treasurer page
+    } else {
+      alert("Invalid username or password."); // Inform user about incorrect credentials
+    }
+  };
 
-                    <div className="w-full flex flex-col">
-                        <input 
-                            type="username"
-                            placeholder="Username"
-                            className="w-full text-black py-4 my-4 bg-trans border-b border-black outline-none focus:outline-none"/>
+  return (
+    <div className="flex flex-col md:flex-row h-screen">
+      {/* Left Section (Logo and Text) */}
+      <div className="md:w-1/2 bg-zinc-800 flex items-center justify-center p-8">
+      <div className="text-center text-white mx-auto"> 
+          <img src={logo} className="lg:w-80 my-4 mx-52" alt="Logo" />
+          <h1 className=" mb-2 -ml-4 text-3xl text-white font-bold">BSIT Disbursement System</h1>
+          <p className="text-xl">
+            Pioneering Efficiency in IT Department Funding Management.
+          </p>
+        </div>
+      </div>
 
-                        <input 
-                            type="password"
-                            placeholder="Password"
-                            className="w-full text-black py-4 my-4 bg-trans border-b border-black outline-none focus:outline-none"/>
-                    </div>
+      {/* Right Section (Login Form) */}
+      <div className="md:w-1/2 h-full bg-white flex flex-col justify-center">
+        <div className="max-w-md mx-auto w-full flex flex-col border-4 mt-10 border-zinc-800 rounded-md p-20">
+          <h1 className="text-3xl font-semibold mb-4">Login</h1>
+          <p className="text-base mb-4">
+            Welcome! Please enter your details to login.
+          </p>
 
-                    <div className="w-full flex items-center justify-between">
-                        <div className="w-full flex items-center">
-                            <input type="checkbox" className="w-4 h-4 mr-2"/>
-                            <p className="text-sm">Remember me</p>
-                        </div>
-                        <Link to="/forgot-password" className="text-sm font-medium whitespace-nowrap cursor-pointer underline underline-offset-2">Forgot Password?</Link>
-                    </div>
+          <div className="mb-4">
+            <input
+              type="username"
+              placeholder="Username"
+              className="w-full py-3 px-4 bg-transparent border-b border-black outline-none focus:outline-none"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </div>
+          <div className="mb-4">
+            <input
+              type="password"
+              placeholder="Password"
+              className="w-full py-3 px-4 bg-transparent border-b border-black outline-none focus:outline-none"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
 
-                    <div className="w-full flex flex-col my-4">
-                        <Link to="/" className="w-full text-white bg-black rounded-md p-4 text-center flex items-center justify-center ease-in-out duration-150 hover:bg-green-700 font-bold">Log In</Link>
-                    </div>
-                </div>
-            </div>
-        </div> 
-    );
+          <div className="flex items-center justify-between mb-4">
+            <label className="flex items-center">
+              <input type="checkbox" className="mr-2" />
+              <span className="text-sm">Remember me</span>
+            </label>
+            <Link
+              to="/forgot-password"
+              className="text-sm font-medium text-blue-600 hover:underline"
+            >
+              Forgot Password?
+            </Link>
+          </div>
+
+          <button
+            className="w-full bg-zinc-800 text-white py-3 rounded-md transition duration-300 ease-in-out hover:bg-green-700 font-bold"
+            onClick={handleLogin}
+          >
+            Log In
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Login;

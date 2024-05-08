@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className="h-screen flex flex-col">
       <Header />
-      <h1 className="mt-8 px-10 text-3xl font-semibold mb-4">Dashboard</h1>
+      <h1 className="mt-8 px-10 text-3xl font-semibold mb-4">Financial Overview</h1>
         <div className="flex-grow overflow-auto">
             <Dashboard />
         </div>
